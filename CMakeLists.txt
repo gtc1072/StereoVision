@@ -21,11 +21,17 @@ endif()
 #add_subdirectory(Calibration)
 add_definitions(-DENABLE_DOUBLE_TYPE)
 
-list(APPEND DEMO_INCLUDE_PATH "./Calibration" "./")
+list(APPEND DEMO_INCLUDE_PATH "./Calibration" "./Match" "./Common" "./")
+
+FILE(GLOB_RECURSE CommonFiles "Common/*.h" "Common/*.hpp" "Common/*.cpp")
+source_group("Common" FILES ${CommonFiles})
 
 FILE(GLOB_RECURSE CalibrationFiles "Calibration/*.h" "Calibration/*.hpp" "Calibration/*.cpp")
 source_group("Calibration" FILES ${CalibrationFiles})
 
+FILE(GLOB_RECURSE MatchFiles "Match/*.h" "Match/*.hpp" "Match/*.cpp")
+source_group("Match" FILES ${MatchFiles})
+
 include_directories(${DEMO_INCLUDE_PATH})
-add_executable(3dVision demo.cpp ${CalibrationFiles})
+add_executable(3dVision Test/demo.cpp ${CalibrationFiles} ${CommonFiles} ${MatchFiles})
 
