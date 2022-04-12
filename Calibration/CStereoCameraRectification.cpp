@@ -65,8 +65,8 @@ bool CStereoCameraRectification::doImageRectify(int imageWidth, int imageHeight,
 	Matrix_Type left_proj, Matrix_Type right_proj)
 {
 	bool ret = false;
-	if (imageWidth <= 0 || imageHeight <= 0 || *pXmap_left || *pYmap_left || *pXmap_right || *pYmap_right) return ret;
-	if (left_distort.size() != 2 || left_distort.size() != 5 || left_distort.size() != right_distort.size()) return ret;
+	if (imageWidth <= 0 || imageHeight <= 0 /*|| *pXmap_left || *pYmap_left || *pXmap_right || *pYmap_right*/) return ret;
+	if (!(left_distort.size() == 2 || left_distort.size() == 5) || left_distort.size() != right_distort.size()) return ret;
 	*pXmap_left = new Data_Type[imageWidth * imageHeight];
 	*pYmap_left = new Data_Type[imageWidth * imageHeight];
 	*pXmap_right = new Data_Type[imageWidth * imageHeight];
