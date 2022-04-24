@@ -21,15 +21,15 @@ endif()
 #add_subdirectory(Calibration)
 add_definitions(-DENABLE_DOUBLE_TYPE)
 
-list(APPEND DEMO_INCLUDE_PATH "./Calibration" "./Match" "./Common" "./")
+list(APPEND DEMO_INCLUDE_PATH "./Calibration" "./Calibration/HandEyeCalibration" "./StereoMatch" "./Common" "./")
 
 FILE(GLOB_RECURSE CommonFiles "Common/*.h" "Common/*.hpp" "Common/*.cpp")
 source_group("Common" FILES ${CommonFiles})
 
-FILE(GLOB_RECURSE CalibrationFiles "Calibration/*.h" "Calibration/*.hpp" "Calibration/*.cpp")
+FILE(GLOB_RECURSE CalibrationFiles "Calibration/*.h" "Calibration/*.hpp" "Calibration/*.cpp" "Calibration/HandEyeCalibration/*.h" "Calibration/HandEyeCalibration/*.hpp" "Calibration/HandEyeCalibration/*.cpp")
 source_group("Calibration" FILES ${CalibrationFiles})
 
-FILE(GLOB_RECURSE MatchFiles "Match/*.h" "Match/*.hpp" "Match/*.cpp")
+FILE(GLOB_RECURSE MatchFiles "StereoMatch/*.h" "StereoMatch/*.hpp" "StereoMatch/*.cpp")
 source_group("Match" FILES ${MatchFiles})
 
 include_directories(${DEMO_INCLUDE_PATH})
