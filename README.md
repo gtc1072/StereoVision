@@ -7,6 +7,8 @@ MonocularCameraCalibration/StereoCameraCalibration/StereoCameraRectification
 
 2、Class "StereoCameraRectification" is implemented according to Bouguet's method.
 
+3、Hand-eye Calibration
+
 # 2)StereoMatch
 
 # 3)PointCloud Processing
