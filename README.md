@@ -12,3 +12,5 @@ MonocularCameraCalibration/StereoCameraCalibration/StereoCameraRectification
 # 2)StereoMatch
 
 # 3)PointCloud Processing
+
+1、Registration: point to point ICP, point to plane ICP
