@@ -91,9 +91,9 @@ void CPoint2PlaneICP::singleRun(flann::Matrix<float>& move, Eigen::MatrixXd& R, 
         float sx = move[i][0];
         float sy = move[i][1];
         float sz = move[i][2];
-        float dx = m_refData[i][0];
-        float dy = m_refData[i][1];
-        float dz = m_refData[i][2];
+        float dx = m_refData[idx][0];
+        float dy = m_refData[idx][1];
+        float dz = m_refData[idx][2];
         A(i, 0) = sy * nz - sz * ny; A(i, 1) = sz * nx - sx * nz; A(i, 2) = sx * ny - sy * nx; A(i, 3) = nx; A(i, 4) = ny; A(i, 5) = nz;
         B(i, 0) = (dx - sx) * nx + (dy - sy) * ny + (dz - sz) * nz;
     }
