@@ -14,3 +14,9 @@ MonocularCameraCalibration/StereoCameraCalibration/StereoCameraRectification
 # 3)PointCloud Processing
 
 1、Registration: point to point ICP, point to plane ICP
+
+# 4)Other
+
+1、Dual Quaternion Interpolation: ScLerp & DIB
+
+2、Adaptive Particle Swarm Optimization
