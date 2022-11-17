@@ -10,5 +10,7 @@ function getCorrectedPose
 
 
 AdaptivePSO方法原理见论文《Adaptive Particle Swarm Optimization》DOI: 10.1109/TSMCB.2009.2015956
+
 DualQuaternion_gtc处理对偶四元数，主要增加sclerp、DIB两种插值方法
+
 AdaptivePSO_DQ结合apso和对偶四元数方法对Pose进行优化
